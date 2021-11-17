@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Venting Forum
+#### By Quentin Bartholomew, Jarathel Jean, and Ras Au-t Amam
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Summary
 
-## Available Scripts
+This project will be a forum with a theme based around venting, whether that be about programming or just life. The page will have a social media style display to give users a familiar feel.
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+* Header
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Main
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Pages
 
-### `npm test`
+* Index
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Show
 
-### `npm run build`
+## Route Table
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Route | Component | Description |
+|-----|--------|--------|
+| / | <Main /> | Homepage
+| /forum | <Index /> | Displays all messages posted within the forum
+| /forum/:id | <Show /> | Displays a specific message
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Stories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A user should be greeted with a welcome message on the homepage
 
-### `npm run eject`
+A user should be able to view all of the messages currently posted on the forum
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A user should be able to post a new message to the forum
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A user should be able to edit a message on the forum
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A user should be able to delete a message on the forum
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+// Potential user stories beyond MVP //
 
-## Learn More
+A user should be able to log in
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A user should only be able to delete their own messages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A user should only be able to edit their own messages
 
-### Code Splitting
+A user should be able to 'upvote' a message posted on the forum
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A user should see the 'most popular' message - the message with the most upvotes
 
-### Analyzing the Bundle Size
+## Challenges
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## List of Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* CSS
 
-### Advanced Configuration
+* JS/JSX/JQuery
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Express
 
-### Deployment
+* React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Mongoose
 
-### `npm run build` fails to minify
+## Component Tree
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* App
+    - Header
+    - Main
+        - Index
+        - Show
