@@ -11,8 +11,18 @@ function Main(props) {
 
     const getMessage = async () => {
         const response = await fetch(URL)
-        const data = response.json()
+        const data = await response.json()
         setMessage(data)
+    }
+
+    const createMessage = async (message) => {
+        await fetch(URL, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(message)
+        })
     }
 
     const updateMessage = async (message, id) => {
