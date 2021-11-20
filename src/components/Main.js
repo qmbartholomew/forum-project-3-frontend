@@ -5,15 +5,41 @@ import Show from '../pages/Show'
 
 function Main(props) {
 
+    const [message, setMessage] = useState(null)
 
-    const URL = 'https://qb-bookmarkd-backend.herokuapp.com/bookmarkd/'
+    const URL = 'https://qb-forum-app-backend-testing.herokuapp.com/forum/'
 
+    const getMessage = async () => {
+        const response = await fetch(URL)
+        const data = response.json()
+        setMessage(data)
+    }
+
+    const updateMessage = async (message, id) => {
+        await fetch(URL + id, {
+            method: 'put',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(message)
+        })
+        getMessage()
+    }
+
+    const deleteMessage = async (id) => {
+        await fetch(URL + id, {
+            method: 'delete'
+        }) 
+        getMessage()
+    }
+
+    useEffect(() => {getMessage()}, [])
     
     return (
         <main>
             <Routes>
-                <Route path='/' element={<Index />} />
-                <Route path='/bookmarkd/:id' element={<Show />} />
+                <Route path='/' element={<Index message={message} createMessage={createMessage} />} />
+                <Route path='/forum/:id' element={<Show message={message} updateMessage={updateMessage} deleteMessage={deleteMessage} />} />
             </Routes>
         </main>
     )
