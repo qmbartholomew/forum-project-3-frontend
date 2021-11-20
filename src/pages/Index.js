@@ -44,6 +44,13 @@ const Index = (props) => {
     />
     <input
       type="text"
+      value={newForm.image}
+      name="image"
+      placeholder="Profile Picture URL"
+      onChange={handleChange}
+    />
+    <input
+      type="text"
       value={newForm.about}
       name="about"
       placeholder="About"
@@ -74,7 +81,7 @@ const Index = (props) => {
         {props.message.map((message) => {
           return <div key={message._id} className='message'>
             <Link to={`/forum/${message._id}`}>
-              <img src={message.img} alt={message.userName} className='user' />
+              <img src={message.image} alt={message.userName} className='user' />
               <h1 className='whoru'>{message.userName}</h1>
               <h3 className='aboutme'>{message.about}</h3>
               <strong><p class="message">{message.message}</p></strong>
