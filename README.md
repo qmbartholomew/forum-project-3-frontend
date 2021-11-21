@@ -1,7 +1,7 @@
 # Venting Forum
 #### By Quentin Bartholomew,  Jerathel Jean,  and Ras Au-t Amam
 
-## Project Summary
+## Project  Summary
 
 This project will be a forum with a theme based around venting, whether that be about programming or just life. The page will have a social media style display to give users a familiar feel.
 
