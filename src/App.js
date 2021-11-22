@@ -3,9 +3,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="pagewrap">
+    <div className="allwrap">
       <Header />
       <Main />
+      <footer><h2>Created by Penguim Room10</h2></footer>
     </div>
   );
 }

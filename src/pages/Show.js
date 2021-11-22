@@ -72,12 +72,12 @@ function Show(props) {
         placeholder="Website URL"
         onChange={handleChange}
       />
-      <input type="submit" value="Update Bookmark" />
+      <input type="submit" value="Update Your Vent" />
       </form>
     )
 
     return (
-      <div>
+      <div className='messageShow'>
         <img src={message.image} alt={message.userName} className='user' />
         <h1 className='whoru'>{message.userName}</h1>
         <h3 className='aboutme'>{message.about}</h3>
