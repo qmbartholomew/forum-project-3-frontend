@@ -33,62 +33,82 @@ const Index = (props) => {
     })
   }
 
-  const form = (
+const form = (
     <form onSubmit={handleSubmit}>
-    <input
-      type="text"
-      value={newForm.userName}
-      name="userName"
-      placeholder="Enter your user name"
-      onChange={handleChange}
-    />
+   
     <input
       type="text"
       value={newForm.image}
+      className="imageInp"
       name="image"
-      placeholder="Profile Picture URL"
-      onChange={handleChange}
-    />
-    <input
-      type="text"
-      value={newForm.about}
-      name="about"
-      placeholder="About"
+      placeholder="Message Picture URL"
       onChange={handleChange}
     />
     <input
       type="text"
       value={newForm.message}
+      className="messageInp"
       name="message"
       placeholder="Your message"
       onChange={handleChange}
     />
+     <input
+      type="text"
+      value={newForm.userName}
+      className="nameInp"
+      name="userName"
+      placeholder="Enter your user name"
+      onChange={handleChange}
+    />
+    
+    <input
+      type="text"
+      value={newForm.about}
+      className="aboutInp"
+      name="about"
+      placeholder="About you ? WhoRU?"
+      onChange={handleChange}
+    />
+    
     <input
       type="text"
       value={newForm.url}
+      className="urlInp"
       name="url"
       placeholder="Website URL"
       onChange={handleChange}
     />
-    <input type="submit" value="Create Message" />
+    <input type="submit" class="subInp" value="Create Message" />
     </form>
   )
 
   if(props.message) {
     return (
-      <div className='news'>
+      <div id="pagewrap">
+        <div class="leftMeta">
         {form}
+        
+        </div>
+        <main>
+      <div className='news'>
+        
         {props.message.map((message) => {
-          return <div key={message._id} className='message'>
-            <Link to={`/forum/${message._id}`}>
+          return <Link to={`/forum/${message._id}`} style={{textDecoration:"none"}}>
+          <div key={message._id} className='message'>
+            
               <img src={message.image} alt={message.userName} className='user' />
+              <strong><p class="messageBox">{message.message}</p></strong>
+              
               <h1 className='whoru'>{message.userName}</h1>
               <h3 className='aboutme'>{message.about}</h3>
-              <strong><p class="message">{message.message}</p></strong>
+              
               <a href="props.url" class="outgoing">{message.url}</a>
-            </Link>
+            
           </div>
+          </Link>
         })}
+      </div>
+      </main>
       </div>
     )
   } else {

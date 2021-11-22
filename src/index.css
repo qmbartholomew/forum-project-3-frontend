@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,169 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+background-color: #F1E9E4;
+height:100%;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.leftMeta{
+  background-color: #ED6A5E;
+  /* width:35%; */
+  height:inherit;
+  display:flex ;
+  padding:10px;
+  border-radius: 10px;
+  justify-content: center;
+  
+  
+}
+
+.leftMeta form input{
+  font-size:.7em;
+  
+}
+
+#pagewrap{
+ display:flex ;
+ width:80%;
+ margin:12% auto 8% auto;
+flex-direction:column;
+ justify-content: center;
+ 
+}
+.message{
+  border: 2px solid #ED6A5E;
+  border-radius:10px;
+  background-color:#DCF9F0;
+  margin-bottom:5%;
+  font-family: 'Anton', sans-serif;
+}
+.message a{
+  text-decoration:none;
+}
+.messageShow{
+  border: 2px solid #ED6A5E;
+  border-radius:10px;
+  background-color:#DCF9F0;
+    font-family: 'Anton', sans-serif;
+  width:50%;
+  margin: 10% 10% 13% 30%
+}
+
+
+.user{
+  border: 1px outset salmon;
+  margin: 2% auto 2% 10%;
+  width:80%;
+
+}
+.whoru{
+  font-size:.9em;
+  display:inline;
+  width:50%;
+  margin: 5% auto 3% 5%;
+}
+.aboutme{
+  font-size:.9em;
+  width:50%;
+  display:inline;
+  margin: 1% auto 3% 3%;
+}
+.messageBox{
+  /* border: 1px solid #ED6A5E; */
+  font-size:1.3em;
+  font-weight:900;
+  margin: 1% auto 0% auto;
+  width:93%;
+  padding:3%;
+  border-radius:10px;
+  
+}
+.messageBox link{
+  text-decoration:none;
+}
+.nav{
+  position:fixed;
+  background-color: salmon;
+  width:100%;
+  margin:0% 0% 0% 0% ;
+  top: 0;
+  padding:1% 1% 0% 1%;
+  color:#204642;
+  font-family: 'Fredoka One', cursive;
+  font-size:1em;
+  line-height:.5em;
+  height:inherit;
+}
+.nav a{
+  text-decoration:none;
+  color:#377771;
+  margin:0%;
+}
+.nav a:hover{
+  color:#204642;
+}
+
+footer{
+  position:fixed;
+  background-color: salmon;
+  width:100%;
+  margin:0% ;
+  bottom: 0;
+  font-size:.7em;
+  padding:.5%;
+  color:#204642;
+}
+
+.messageInp{
+  width:92%;
+  position:relative;
+  padding: 2%;
+  /* display:inline-block; */
+  margin:.5%;
+  border-radius: 50px;
+  
+}
+.imageInp{
+  border-radius: 50px;  
+  width:45%;
+  padding:1%;
+  margin:.5%;
+}
+.nameInp{
+  width:43%;
+  padding:2%;
+  border-radius: 50px;
+  margin:.5%;
+}
+.aboutInp{
+  width:43%;
+  padding:2%;
+  border-radius: 50px;
+  margin:.5%;
+}
+.urlInp {
+  width:43%;
+  padding:2%;
+  border-radius: 50px;
+  margin:.5%;
+}
+.outgoing{
+  display:block;
+  text-align:center;
+  margin-bottom:3%
+}
+.subInp{
+  padding:2%;
+  color:#4CE0B3;
+  display:block;
+  margin-left:20%;
+  border-radius:3px;
+  background-color:#377771;
+  margin:.5% auto 2% 40%;
 }
