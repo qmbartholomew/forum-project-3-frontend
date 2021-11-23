@@ -39,20 +39,9 @@ A user should be able to edit a message on the forum
 
 A user should be able to delete a message on the forum
 
-// Potential user stories beyond MVP //
-
-A user should be able to log in
-
-A user should only be able to delete their own messages
-
-A user should only be able to edit their own messages
-
-A user should be able to 'upvote' a message posted on the forum
-
-A user should see the 'most popular' message - the message with the most upvotes
-
 ## Challenges
 
+Our backend was acting up during the last day prior to presentations. Beyond that most things went very well, we had an issue figuring out how to have links on our page actually redirect to an external site.
 
 ## List of Technologies
 
