@@ -6,7 +6,7 @@ function App() {
     <div className="allwrap">
       <Header />
       <Main />
-      <footer><h2>Created by Penguim Room10</h2></footer>
+      <footer><h2>Created by Penguin Room10</h2></footer>
     </div>
   );
 }

@@ -102,7 +102,7 @@ const form = (
               <h1 className='whoru'>{message.userName}</h1>
               <h3 className='aboutme'>{message.about}</h3>
               
-              <a href="props.url" class="outgoing">{message.url}</a>
+              <a href="message.url" class="outgoing">{message.url}</a>
             
           </div>
           </Link>

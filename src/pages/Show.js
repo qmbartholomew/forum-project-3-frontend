@@ -82,7 +82,7 @@ function Show(props) {
         <h1 className='whoru'>{message.userName}</h1>
         <h3 className='aboutme'>{message.about}</h3>
         <strong><p class="message">{message.message}</p></strong>
-        <a href="props.url" class="outgoing">{message.url}</a>
+        <a href={message.url} class="outgoing">{message.url}</a>
         {form}
         <button onClick={removeMessage}>DELETE MESSAGE</button>
       </div>
