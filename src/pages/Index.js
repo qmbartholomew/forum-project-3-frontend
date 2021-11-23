@@ -31,7 +31,12 @@ const Index = (props) => {
       url: '',
       startRating: 0
     })
+    setTimeout(()=>{
+      window.location.reload(false);
+  }, 500);
   }
+
+  
 
 const form = (
     <form onSubmit={handleSubmit}>
