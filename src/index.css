@@ -196,6 +196,17 @@ footer{
   background-color:#377771;
   margin:.5% auto 2% 40%;
 }
+#modalis{
+  display:none;
+  width:40%;
+ position:absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  background-color:#ffffff;
+  border: 4px dashed red;
+  padding:10px;
+}
 
 
 @media only screen and (min-width: 500px) {

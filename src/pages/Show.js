@@ -75,7 +75,15 @@ function Show(props) {
       <input type="submit" value="Update Your Vent" />
       </form>
     )
+    const modal = document.getElementById("modalis");
+    // const butn = document.getElementById("buttonis");
 
+    const openModal = () => {
+      modal.style.display = "block";
+      
+    }
+    
+    
     return (
       <div className='messageShow'>
         <img src={message.image} alt={message.userName} className='user' />
@@ -84,7 +92,10 @@ function Show(props) {
         <strong><p class="message">{message.message}</p></strong>
         <a href={message.url} class="outgoing">{message.url}</a>
         {form}
-        <button onClick={removeMessage}>DELETE MESSAGE</button>
+<button onClick={openModal} id="buttonis">DELETE MESSAGE</button>
+        <div id="modalis">
+          <h2> Sure You Want To Delete?</h2>
+        <center><button onClick={removeMessage}>DELETE NOW!</button></center></div>
       </div>
     )
 
