@@ -31,7 +31,12 @@ const Index = (props) => {
       url: '',
       startRating: 0
     })
+    setTimeout(()=>{
+      window.location.reload(false);
+  }, 500);
   }
+
+  
 
 const form = (
     <form onSubmit={handleSubmit}>
@@ -93,19 +98,19 @@ const form = (
       <div className='news'>
         
         {props.message.map((message) => {
-          return <Link to={`/forum/${message._id}`} style={{textDecoration:"none"}}>
-          <div key={message._id} className='message'>
-            
+          return <div key={message._id} className='message'>
+             <Link to={`/forum/${message._id}`} style={{textDecoration:"none"}}>
               <img src={message.image} alt={message.userName} className='user' />
               <strong><p class="messageBox">{message.message}</p></strong>
               
               <h1 className='whoru'>{message.userName}</h1>
               <h3 className='aboutme'>{message.about}</h3>
-              
-              <a href="props.url" class="outgoing">{message.url}</a>
+              </Link>
+              <a href={message.url} class="outgoing">{message.url}</a>
             
           </div>
-          </Link>
+         
+          
         })}
       </div>
       </main>
