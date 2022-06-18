@@ -7,7 +7,7 @@ function Main(props) {
 
     const [message, setMessage] = useState(null)
 
-    const URL = 'https://qb-forum-app-backend-testing.herokuapp.com/forum'
+    const URL = 'https://qb-forum-app-backend-testing.herokuapp.com/forum/'
 
     const getMessage = async () => {
         const response = await fetch(URL)
